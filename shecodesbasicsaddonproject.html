@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness</title>
+    <style>
+      body {
+        background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/029/original/purple_background.jpeg?1673812519");
+        background-size: cover;
+      }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        margin: 0 auto;
+        color: rgb(92, 0, 92);
+      }
+      h2 {
+        text-align: center;
+        color: rgb(92, 0, 92);
+      }
+      img {
+        width: 100%;
+        border: 1px solid rgb(92, 0, 92);
+        border-radius: 20px;
+        transition: all 150ms ease-in-out;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+      }
+      img:hover {
+        filter: contrast(70%);
+        transform: scale(1.1);
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      h4 {
+        text-align: center;
+      }
+      footer {
+        text-align: center;
+        margin: 15px;
+        font-size: 18px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: rgb(245, 197, 248);
+        padding: 20px;
+        border-radius: 30px;
+        border: 4px solid purple;
+      }
+      .theme-button {
+        font-size: 12px;
+        background-color: black;
+        color: white;
+        display: block;
+        margin: 10px auto;
+        border-radius: 5px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      .theme-button:hover {
+        color: black;
+        background-color: white;
+        cursor: pointer;
+      }
+      .learnmore {
+        display: block;
+        margin: 10px auto;
+        border: 4px solid purple;
+        background: white;
+        font-size: 18px;
+        border-radius: 5px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      .learnmore:hover {
+        background: purple;
+        color: white;
+        cursor: pointer;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+      }
+      .dark {
+        background: black;
+        color: white;
+      }
+      .dark .container {
+        background-color: rgb(138, 137, 137);
+        border: 4px solid white;
+      }
+      .dark h1 {
+        color: white;
+      }
+      .dark h2 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>Fitness</h1>
+      <h2>Discipline...Consistency...Hobby...</h2>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/892/original/workout.jpeg?1673721741"
+          alt="" />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/893/original/dumbells.jpeg?1673721752"
+          alt="" />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/894/original/gym.jpeg?1673721761"
+          alt="" />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/895/original/pushup.jpeg?1673721772"
+          alt="" />
+      </div>
+      <p>
+        Fitness is a journey of discipline and consistency for some. But to
+        others, it's a hobby. For me, fitness is a hobby. I love the feeling
+        after a good workout. That feeling doesn't compare to anything in the
+        world. It's a feeling of accomplishment, a fresh breath of air. Fitness,
+        usually, starts as a journey of discipline and consistency. But once,
+        you begin to see amazing results, it becomes a hobby. It gets to a point
+        where you cannot go a day without a good fitness regime.
+      </p>
+      <h4>
+        ⬇️ If you would like to learn more about my fitness journey. Click here
+        ⬇️
+      </h4>
+      <button class="learnmore">Learn more</button>
+    </div>
+    <footer>Coded by Fazila Nasib</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      let themebutton = document.querySelector(".theme-button");
+      themebutton.addEventListener("click", changeTheme);
+
+      function toLearn() {
+        alert(`Please subscribe to my newsletter to learn more!😊`);
+      }
+      let learnbutton = document.querySelector(".learnmore");
+      learnbutton.addEventListener("click", toLearn);
+    </script>
+  </body>
+</html>
